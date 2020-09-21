@@ -625,6 +625,9 @@ public class BaseNoGui {
       showError(tr("Incorrect IDE installation folder"), tr("Your copy of the IDE is installed in a subfolder of your settings folder.\nPlease move the IDE to another folder."), 10);
     }
     if (isIDEInstalledIntoSketchbookFolder()) {
+if(PreferencesData.has("sketchbook.path")){
+ showWarning(I18n.format("sketchbook.path=<{0}>", PreferencesData.get("sketchbook.path")), I18n.format("runtime.ide.path=<{0}>", PreferencesData.get("runtime.ide.path")), null);
+}
       showError(tr("Incorrect IDE installation folder"), tr("Your copy of the IDE is installed in a subfolder of your sketchbook.\nPlease move the IDE to another folder."), 10);
     }
   }
