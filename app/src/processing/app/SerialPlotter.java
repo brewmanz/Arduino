@@ -62,7 +62,7 @@ public class SerialPlotter extends AbstractMonitor {
       color = Theme.getColorCycleColor("plotting.graphcolor", id);
     }
 
-    public void paint(Graphics2D g, float xstep, double minY, 
+    public void paint(Graphics2D g, float xstep, double minY,
                       double maxY, double rangeY, double height) {
       g.setColor(color);
       g.setStroke(new BasicStroke(1.0f));
@@ -96,9 +96,17 @@ public class SerialPlotter extends AbstractMonitor {
       xPadding = 20;
     }
 
+    private double altMinY = Double.POSITIVE_INFINITY;
+    public void setAltMinY(double num) {
+      altMinY = num;
+    }
+    private double altMaxY = Double.NEGATIVE_INFINITY;
+    public void setAltMaxY(double num) {
+      altMaxY = num;
+    }
     private Ticks computeBounds() {
-      minY = Double.POSITIVE_INFINITY;
-      maxY = Double.NEGATIVE_INFINITY;
+      minY = altMinY; // was Double.POSITIVE_INFINITY
+      maxY = altMaxY; // was Double.NEGATIVE_INFINITY
       for(Graph g : graphs) {
         if (!g.buffer.isEmpty()) {
           minY = Math.min(g.buffer.min(), minY);
@@ -158,11 +166,11 @@ public class SerialPlotter extends AbstractMonitor {
       // handle data count
       int cnt = xCount - BUFFER_CAPACITY;
       if (xCount < BUFFER_CAPACITY) cnt = 0;
-        
+
       double zeroTick = ticks.getTick(0);
       double lastTick = ticks.getTick(ticks.getTickCount() - 1);
       double xTickRange = BUFFER_CAPACITY / ticks.getTickCount();
-        
+
       for (int i = 0; i < ticks.getTickCount() + 1; i++) {
           String s;
           int xValue;
@@ -192,7 +200,7 @@ public class SerialPlotter extends AbstractMonitor {
       g.drawLine(bounds.x + xOffset, (int) transformY(lastTick) - 5, bounds.x + xOffset, bounds.y + (int) transformY(zeroTick) + 5);
       // draw major x axis
       g.drawLine(xOffset, (int) transformY(zeroTick), bounds.width - xPadding, (int)transformY(zeroTick));
-        
+
       g.setTransform(AffineTransform.getTranslateInstance(xOffset, 0));
       float xstep = (float) (bounds.width - xOffset - xPadding) / (float) BUFFER_CAPACITY;
 
@@ -341,7 +349,7 @@ public class SerialPlotter extends AbstractMonitor {
       send(textField.getText());
       textField.setText("");
     });
- 
+
   }
 
   private void send(String string) {
@@ -415,15 +423,15 @@ public class SerialPlotter extends AbstractMonitor {
       for(int i = 0; i < parts.length; ++i) {
         Double value = null;
         String label = null;
-        
+
         // column formated name value pair
         if(parts[i].contains(":")) {
           // get label
           String[] subString = parts[i].split("[:]+");
-            
+
           if(subString.length > 0) {
             int labelLength = subString[0].length();
-              
+
             if(labelLength > 32) {
                 labelLength = 32;
             }
@@ -431,7 +439,7 @@ public class SerialPlotter extends AbstractMonitor {
           } else {
             label = "";
           }
-            
+
           if(subString.length > 1) {
             parts[i] = subString[1];
           } else {
@@ -448,7 +456,17 @@ public class SerialPlotter extends AbstractMonitor {
         if(label == null && value == null) {
           label = parts[i];
         }
-        
+
+        // ### allow reset of Graph Display, Min & Max ###
+        if(label != null) {
+          boolean controlPresent = false; // allow future options, like setmin and setmax
+          if(label.contains("formfeed")){
+            graphs.clear();
+            controlPresent = true;
+          }
+          if(controlPresent){ continue; }
+        }
+
         if(value != null) {
           if(validParts >= graphs.size()) {
             graphs.add(new Graph(validParts));
