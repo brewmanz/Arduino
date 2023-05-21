@@ -1,0 +1,8 @@
+## Build Arduino IDE from ~/git/Arduino
+## officially (https://forum.arduino.cc/t/building-arduino-ide-from-source-linux-works-macos-and-windows-do-not/451099) ..
+# cd ~/git/Arduino/build
+# sudo ant
+# sudo ant run
+#
+## but I just use my desktop shortcut to run after a build
+

@@ -1,0 +1,1557 @@
+.
+├── app
+│   ├── build.xml
+│   ├── lib
+│   │   ├── apple.jar
+│   │   ├── apple.LICENSE.BSD-like.txt
+│   │   ├── batik-1.8.jar
+│   │   ├── batik-anim-1.8.jar
+│   │   ├── batik-awt-util-1.8.jar
+│   │   ├── batik-bridge-1.8.jar
+│   │   ├── batik-codec-1.8.jar
+│   │   ├── batik-css-1.8.jar
+│   │   ├── batik-dom-1.8.jar
+│   │   ├── batik-ext-1.8.jar
+│   │   ├── batik-gvt-1.8.jar
+│   │   ├── batik.LICENSE.ASL-2.0.txt
+│   │   ├── batik-parser-1.8.jar
+│   │   ├── batik-rasterizer-1.8.jar
+│   │   ├── batik-script-1.8.jar
+│   │   ├── batik-squiggle-1.8.jar
+│   │   ├── batik-svg-dom-1.8.jar
+│   │   ├── batik-svgpp-1.8.jar
+│   │   ├── batik-transcoder-1.8.jar
+│   │   ├── batik-util-1.8.jar
+│   │   ├── batik-xml-1.8.jar
+│   │   ├── bcpg-jdk15on-152.jar
+│   │   ├── bcprov-jdk15on-152.jar
+│   │   ├── commons-codec-1.7.jar
+│   │   ├── commons-codec.LICENSE.ASL-2.0.txt
+│   │   ├── commons-compress-1.8.jar
+│   │   ├── commons-compress.LICENSE.ASL-2.0.txt
+│   │   ├── commons-exec-1.1.jar
+│   │   ├── commons-exec.LICENSE.ASL-2.0.txt
+│   │   ├── commons-httpclient-3.1.jar
+│   │   ├── commons-httpclient.LICENSE.ASL-2.0.txt
+│   │   ├── commons-io-2.6.jar
+│   │   ├── commons-lang3-3.8.1.jar
+│   │   ├── commons-lang3.LICENSE.ASL-2.0.txt
+│   │   ├── commons-logging-1.0.4.jar
+│   │   ├── commons-logging.LICENSE.ASL-2.0.txt
+│   │   ├── commons-net-3.3.jar
+│   │   ├── commons-net.LICENSE.ASL-2.0.txt
+│   │   ├── jackson-annotations-2.9.5.jar
+│   │   ├── jackson-core-2.9.5.jar
+│   │   ├── jackson-databind-2.9.5.jar
+│   │   ├── java-semver-0.8.0.jar
+│   │   ├── java-semver.LICENSE.MIT.txt
+│   │   ├── jmdns-3.5.5.jar
+│   │   ├── jmdns.LICENSE.ASL-2.0-LGPL-2.1.txt
+│   │   ├── jsch-0.1.50.jar
+│   │   ├── jsch.LICENSE.BSD.txt
+│   │   ├── jssc-2.8.0-arduino4.jar
+│   │   ├── jssc.LICENSE.GPL.txt
+│   │   ├── jssc.LICENSE.LGPL.txt
+│   │   ├── jtouchbar-1.0.0.jar
+│   │   ├── jtouchbar.LICENSE.MIT.txt
+│   │   ├── log4j-api-2.12.0.jar
+│   │   ├── log4j-core-2.12.0.jar
+│   │   ├── README.xml-apis-1.3.04.txt
+│   │   ├── README.xml-apis-ext-1.3.04.txt
+│   │   ├── rsyntaxtextarea-3.0.3-SNAPSHOT.jar
+│   │   ├── RSyntaxTextArea.License.txt
+│   │   ├── slf4j-api-1.7.22.jar
+│   │   ├── slf4j-simple-1.7.22.jar
+│   │   ├── xml-apis-1.3.04.jar
+│   │   ├── xml-apis-ext-1.3.04.jar
+│   │   └── xmlgraphics-commons-2.0.jar
+│   ├── src
+│   │   ├── cc
+│   │   │   └── arduino
+│   │   │       ├── ConsoleOutputStream.java
+│   │   │       ├── contributions
+│   │   │       │   ├── BuiltInCoreIsNewerCheck.java
+│   │   │       │   ├── ContributionsSelfCheck.java
+│   │   │       │   ├── libraries
+│   │   │       │   │   ├── filters
+│   │   │       │   │   │   └── UpdatableLibraryPredicate.java
+│   │   │       │   │   ├── LibraryOfSameTypeComparator.java
+│   │   │       │   │   ├── LibraryTypeComparator.java
+│   │   │       │   │   └── ui
+│   │   │       │   │       ├── ContributedLibraryReleasesComparator.java
+│   │   │       │   │       ├── ContributedLibraryTableCellEditor.java
+│   │   │       │   │       ├── ContributedLibraryTableCellJPanel.java
+│   │   │       │   │       ├── ContributedLibraryTableCellRenderer.java
+│   │   │       │   │       ├── DropdownAllLibraries.java
+│   │   │       │   │       ├── DropdownInstalledLibraryItem.java
+│   │   │       │   │       ├── DropdownLibraryOfCategoryItem.java
+│   │   │       │   │       ├── DropdownLibraryOfTypeItem.java
+│   │   │       │   │       ├── DropdownUpdatableLibrariesItem.java
+│   │   │       │   │       ├── LibrariesIndexTableModel.java
+│   │   │       │   │       ├── LibraryManagerUI.java
+│   │   │       │   │       └── MultiLibraryInstallDialog.java
+│   │   │       │   ├── packages
+│   │   │       │   │   ├── filters
+│   │   │       │   │   │   ├── CategoryPredicate.java
+│   │   │       │   │   │   └── UpdatablePlatformPredicate.java
+│   │   │       │   │   └── ui
+│   │   │       │   │       ├── ContributedPlatformReleases.java
+│   │   │       │   │       ├── ContributedPlatformTableCellEditor.java
+│   │   │       │   │       ├── ContributedPlatformTableCellJPanel.java
+│   │   │       │   │       ├── ContributedPlatformTableCellRenderer.java
+│   │   │       │   │       ├── ContributionIndexTableModel.java
+│   │   │       │   │       ├── ContributionManagerUI.java
+│   │   │       │   │       ├── DropdownAllCoresItem.java
+│   │   │       │   │       ├── DropdownCoreOfCategoryItem.java
+│   │   │       │   │       └── DropdownUpdatableCoresItem.java
+│   │   │       │   └── ui
+│   │   │       │       ├── DropdownItem.java
+│   │   │       │       ├── FilteredAbstractTableModel.java
+│   │   │       │       ├── FilterJTextField.java
+│   │   │       │       ├── InstallerJDialog.java
+│   │   │       │       ├── InstallerJDialogUncaughtExceptionHandler.java
+│   │   │       │       ├── InstallerTableCell.java
+│   │   │       │       ├── listeners
+│   │   │       │       │   ├── AbstractKeyListener.java
+│   │   │       │       │   └── DelegatingKeyListener.java
+│   │   │       │       └── ProgressJProgressBar.java
+│   │   │       ├── packages
+│   │   │       │   ├── formatter
+│   │   │       │   │   ├── AStyleInterface.java
+│   │   │       │   │   └── AStyle.java
+│   │   │       │   └── MonitorFactory.java
+│   │   │       ├── UpdatableBoardsLibsFakeURLsHandler.java
+│   │   │       └── view
+│   │   │           ├── Event.java
+│   │   │           ├── EventListener.java
+│   │   │           ├── findreplace
+│   │   │           │   ├── FindReplace.form
+│   │   │           │   └── FindReplace.java
+│   │   │           ├── GoToLineNumber.form
+│   │   │           ├── GoToLineNumber.java
+│   │   │           ├── JMenuUtils.java
+│   │   │           ├── NotificationPopup.java
+│   │   │           ├── preferences
+│   │   │           │   ├── AdditionalBoardsManagerURLTextArea.form
+│   │   │           │   ├── AdditionalBoardsManagerURLTextArea.java
+│   │   │           │   ├── Preferences.form
+│   │   │           │   └── Preferences.java
+│   │   │           ├── SplashScreenHelper.java
+│   │   │           └── StubMenuListener.java
+│   │   ├── log4j2.xml
+│   │   └── processing
+│   │       └── app
+│   │           ├── AbstractMonitor.java
+│   │           ├── AbstractTextMonitor.java
+│   │           ├── Base.java
+│   │           ├── CommandHistory.java
+│   │           ├── EditorConsole.java
+│   │           ├── EditorHeader.java
+│   │           ├── Editor.java
+│   │           ├── EditorLineStatus.java
+│   │           ├── EditorStatus.java
+│   │           ├── EditorTab.java
+│   │           ├── EditorToolbar.java
+│   │           ├── forms
+│   │           │   └── PasswordAuthorizationDialog.java
+│   │           ├── helpers
+│   │           │   ├── CircularBuffer.java
+│   │           │   ├── ConsoleLogger.java
+│   │           │   ├── DocumentTextChangeListener.java
+│   │           │   ├── GUIUserNotifier.java
+│   │           │   ├── Keys.java
+│   │           │   ├── LogFormatter.java
+│   │           │   ├── SimpleAction.java
+│   │           │   └── Ticks.java
+│   │           ├── javax
+│   │           │   └── swing
+│   │           │       └── filechooser
+│   │           │           └── FileNameExtensionFilter.java
+│   │           ├── macosx
+│   │           │   └── ThinkDifferent.java
+│   │           ├── NetworkMonitor.java
+│   │           ├── NewBoardListener.java
+│   │           ├── Preferences.java
+│   │           ├── PresentMode.java
+│   │           ├── Resources.java
+│   │           ├── RunnerListener.java
+│   │           ├── SerialMonitor.java
+│   │           ├── SerialPlotter.java
+│   │           ├── SketchController.java
+│   │           ├── syntax
+│   │           │   ├── ArduinoTokenMakerFactory.java
+│   │           │   ├── MyConfigurableCaret.java
+│   │           │   ├── PdeKeywords.java
+│   │           │   ├── SketchTextAreaDefaultInputMap.java
+│   │           │   ├── SketchTextAreaEditorKit.java
+│   │           │   ├── SketchTextArea.java
+│   │           │   ├── SketchTextAreaUI.java
+│   │           │   ├── SketchTokenMaker.java
+│   │           │   └── Token.java
+│   │           ├── TextAreaFIFO.java
+│   │           ├── Theme.java
+│   │           ├── tools
+│   │           │   ├── Archiver.java
+│   │           │   ├── DiscourseFormat.java
+│   │           │   ├── FixEncoding.java
+│   │           │   ├── MenuScroller.java
+│   │           │   ├── Tool.java
+│   │           │   └── ZipDeflater.java
+│   │           └── UpdateCheck.java
+│   ├── test
+│   │   ├── cc
+│   │   │   └── arduino
+│   │   │       ├── contributions
+│   │   │       │   ├── GPGDetachedSignatureVerifierTest.java
+│   │   │       │   ├── GzippedJsonDownloaderTest.java
+│   │   │       │   ├── JsonDownloaderTest.java
+│   │   │       │   ├── libraries
+│   │   │       │   │   └── LibraryOfTypeComparatorTest.java
+│   │   │       │   ├── package_index.json
+│   │   │       │   ├── package_index.json.sig
+│   │   │       │   ├── public.gpg.key
+│   │   │       │   ├── UpdatableLibraryTest.java
+│   │   │       │   └── VersionHelperTest.java
+│   │   │       ├── i18n
+│   │   │       │   ├── ExternalProcessOutputParserTest.java
+│   │   │       │   └── I18NTest.java
+│   │   │       ├── net
+│   │   │       │   ├── CustomProxySelectorTest.java
+│   │   │       │   ├── PACSupportMethodsTest.java
+│   │   │       │   ├── proxy_complex.pac
+│   │   │       │   ├── proxy_direct.pac
+│   │   │       │   ├── proxy_http.pac
+│   │   │       │   └── proxy_socks.pac
+│   │   │       └── packages
+│   │   │           ├── contributions
+│   │   │           │   ├── HostDependentDownloadableContributionStub.java
+│   │   │           │   └── HostDependentDownloadableContributionTest.java
+│   │   │           └── uploaders
+│   │   │               └── MergeSketchWithUploaderTest.java
+│   │   ├── Keypad_mac.zip
+│   │   ├── Keypad_with_hidden_files.zip
+│   │   ├── optiboot_atmega328.hex
+│   │   ├── processing
+│   │   │   └── app
+│   │   │       ├── AbstractGUITest.java
+│   │   │       ├── AbstractWithPreferencesTest.java
+│   │   │       ├── AutoformatProducesOneUndoActionTest.java
+│   │   │       ├── AutoformatSavesCaretPositionTest.java
+│   │   │       ├── AutoformatTest.java
+│   │   │       ├── BlockCommentGeneratesOneUndoActionTest.java
+│   │   │       ├── CommandLineTest.java
+│   │   │       ├── debug
+│   │   │       │   ├── TargetPackageStub.java
+│   │   │       │   ├── TargetPlatformStub.java
+│   │   │       │   └── UploaderFactoryTest.java
+│   │   │       ├── DefaultTargetTest.java
+│   │   │       ├── EditorConsoleTest.java
+│   │   │       ├── helpers
+│   │   │       │   ├── ArduinoFrameFixture.java
+│   │   │       │   ├── SketchTextAreaComponentDriver.java
+│   │   │       │   ├── SketchTextAreaComponentMatcher.java
+│   │   │       │   ├── SketchTextAreaFixture.java
+│   │   │       │   └── StringReplacerTest.java
+│   │   │       ├── HittingEscapeOnCloseConfirmationDialogTest.java
+│   │   │       ├── linux
+│   │   │       │   ├── UDevAdmParserTest.java
+│   │   │       │   └── udev_output.txt
+│   │   │       ├── macosx
+│   │   │       │   ├── system_profiler_output2.txt
+│   │   │       │   ├── system_profiler_output3.txt
+│   │   │       │   ├── system_profiler_output4.txt
+│   │   │       │   ├── system_profiler_output5.txt
+│   │   │       │   ├── system_profiler_output6.txt
+│   │   │       │   ├── system_profiler_output7.txt
+│   │   │       │   ├── system_profiler_output8.txt
+│   │   │       │   ├── system_profiler_output9.txt
+│   │   │       │   ├── system_profiler_output.txt
+│   │   │       │   └── SystemProfilerParserTest.java
+│   │   │       ├── ReduceIndentWith1CharOnLastLineTest.java
+│   │   │       ├── ReplacingTextGeneratesTwoUndoActionsTest.java
+│   │   │       ├── SerialTest.java
+│   │   │       ├── syntax
+│   │   │       │   └── PdeKeywordsTest.java
+│   │   │       ├── TestHelper.java
+│   │   │       ├── tools
+│   │   │       │   ├── test_partial_boards.txt
+│   │   │       │   └── ZipDeflaterTest.java
+│   │   │       ├── UpdateTextAreaActionTest.java
+│   │   │       └── windows
+│   │   │           ├── german.reg.query.output.txt
+│   │   │           ├── ListComPortsParserTest.java
+│   │   │           └── RegexpTest.java
+│   │   ├── sketch.hex
+│   │   ├── Test2.zip
+│   │   └── Test.zip
+│   ├── testdata
+│   │   └── libraries
+│   │       ├── Bridge_1.6.3
+│   │       │   └── Bridge
+│   │       │       ├── examples
+│   │       │       │   ├── Bridge
+│   │       │       │   │   └── Bridge.ino
+│   │       │       │   ├── ConsoleAsciiTable
+│   │       │       │   │   └── ConsoleAsciiTable.ino
+│   │       │       │   ├── ConsolePixel
+│   │       │       │   │   └── ConsolePixel.ino
+│   │       │       │   ├── ConsoleRead
+│   │       │       │   │   └── ConsoleRead.ino
+│   │       │       │   ├── Datalogger
+│   │       │       │   │   └── Datalogger.ino
+│   │       │       │   ├── FileWriteScript
+│   │       │       │   │   └── FileWriteScript.ino
+│   │       │       │   ├── HttpClient
+│   │       │       │   │   └── HttpClient.ino
+│   │       │       │   ├── HttpClientConsole
+│   │       │       │   │   └── HttpClientConsole.ino
+│   │       │       │   ├── MailboxReadMessage
+│   │       │       │   │   └── MailboxReadMessage.ino
+│   │       │       │   ├── Process
+│   │       │       │   │   └── Process.ino
+│   │       │       │   ├── RemoteDueBlink
+│   │       │       │   │   └── RemoteDueBlink.ino
+│   │       │       │   ├── ShellCommands
+│   │       │       │   │   └── ShellCommands.ino
+│   │       │       │   ├── TemperatureWebPanel
+│   │       │       │   │   ├── TemperatureWebPanel.ino
+│   │       │       │   │   └── www
+│   │       │       │   │       ├── index.html
+│   │       │       │   │       └── zepto.min.js
+│   │       │       │   ├── TimeCheck
+│   │       │       │   │   └── TimeCheck.ino
+│   │       │       │   ├── WiFiStatus
+│   │       │       │   │   └── WiFiStatus.ino
+│   │       │       │   ├── YunFirstConfig
+│   │       │       │   │   └── YunFirstConfig.ino
+│   │       │       │   └── YunSerialTerminal
+│   │       │       │       └── YunSerialTerminal.ino
+│   │       │       ├── keywords.txt
+│   │       │       ├── library.properties
+│   │       │       ├── README.adoc
+│   │       │       └── src
+│   │       │           ├── BridgeClient.cpp
+│   │       │           ├── BridgeClient.h
+│   │       │           ├── Bridge.cpp
+│   │       │           ├── Bridge.h
+│   │       │           ├── BridgeServer.cpp
+│   │       │           ├── BridgeServer.h
+│   │       │           ├── BridgeSSLClient.cpp
+│   │       │           ├── BridgeSSLClient.h
+│   │       │           ├── BridgeUdp.cpp
+│   │       │           ├── BridgeUdp.h
+│   │       │           ├── Console.cpp
+│   │       │           ├── Console.h
+│   │       │           ├── FileIO.cpp
+│   │       │           ├── FileIO.h
+│   │       │           ├── HttpClient.cpp
+│   │       │           ├── HttpClient.h
+│   │       │           ├── Mailbox.cpp
+│   │       │           ├── Mailbox.h
+│   │       │           ├── Process.cpp
+│   │       │           ├── Process.h
+│   │       │           ├── YunClient.h
+│   │       │           └── YunServer.h
+│   │       ├── Bridge_1.7.0
+│   │       │   └── Bridge
+│   │       │       ├── examples
+│   │       │       │   ├── Bridge
+│   │       │       │   │   └── Bridge.ino
+│   │       │       │   ├── ConsoleAsciiTable
+│   │       │       │   │   └── ConsoleAsciiTable.ino
+│   │       │       │   ├── ConsolePixel
+│   │       │       │   │   └── ConsolePixel.ino
+│   │       │       │   ├── ConsoleRead
+│   │       │       │   │   └── ConsoleRead.ino
+│   │       │       │   ├── Datalogger
+│   │       │       │   │   └── Datalogger.ino
+│   │       │       │   ├── FileWriteScript
+│   │       │       │   │   └── FileWriteScript.ino
+│   │       │       │   ├── HttpClient
+│   │       │       │   │   └── HttpClient.ino
+│   │       │       │   ├── HttpClientConsole
+│   │       │       │   │   └── HttpClientConsole.ino
+│   │       │       │   ├── MailboxReadMessage
+│   │       │       │   │   └── MailboxReadMessage.ino
+│   │       │       │   ├── Process
+│   │       │       │   │   └── Process.ino
+│   │       │       │   ├── RemoteDueBlink
+│   │       │       │   │   └── RemoteDueBlink.ino
+│   │       │       │   ├── ShellCommands
+│   │       │       │   │   └── ShellCommands.ino
+│   │       │       │   ├── TemperatureWebPanel
+│   │       │       │   │   ├── TemperatureWebPanel.ino
+│   │       │       │   │   └── www
+│   │       │       │   │       ├── index.html
+│   │       │       │   │       └── zepto.min.js
+│   │       │       │   ├── TimeCheck
+│   │       │       │   │   └── TimeCheck.ino
+│   │       │       │   ├── WiFiStatus
+│   │       │       │   │   └── WiFiStatus.ino
+│   │       │       │   ├── YunFirstConfig
+│   │       │       │   │   └── YunFirstConfig.ino
+│   │       │       │   └── YunSerialTerminal
+│   │       │       │       └── YunSerialTerminal.ino
+│   │       │       ├── keywords.txt
+│   │       │       ├── library.properties
+│   │       │       ├── README.adoc
+│   │       │       └── src
+│   │       │           ├── BridgeClient.cpp
+│   │       │           ├── BridgeClient.h
+│   │       │           ├── Bridge.cpp
+│   │       │           ├── Bridge.h
+│   │       │           ├── BridgeServer.cpp
+│   │       │           ├── BridgeServer.h
+│   │       │           ├── BridgeSSLClient.cpp
+│   │       │           ├── BridgeSSLClient.h
+│   │       │           ├── BridgeUdp.cpp
+│   │       │           ├── BridgeUdp.h
+│   │       │           ├── Console.cpp
+│   │       │           ├── Console.h
+│   │       │           ├── FileIO.cpp
+│   │       │           ├── FileIO.h
+│   │       │           ├── HttpClient.cpp
+│   │       │           ├── HttpClient.h
+│   │       │           ├── Mailbox.cpp
+│   │       │           ├── Mailbox.h
+│   │       │           ├── Process.cpp
+│   │       │           ├── Process.h
+│   │       │           ├── YunClient.h
+│   │       │           └── YunServer.h
+│   │       ├── index_Bridge_only
+│   │       │   └── library_index.json
+│   │       ├── index_SD_only
+│   │       │   └── library_index.json
+│   │       ├── SD_1.1.1
+│   │       │   └── SD
+│   │       │       ├── examples
+│   │       │       │   ├── CardInfo
+│   │       │       │   │   └── CardInfo.ino
+│   │       │       │   ├── Datalogger
+│   │       │       │   │   └── Datalogger.ino
+│   │       │       │   ├── DumpFile
+│   │       │       │   │   └── DumpFile.ino
+│   │       │       │   ├── Files
+│   │       │       │   │   └── Files.ino
+│   │       │       │   ├── listfiles
+│   │       │       │   │   └── listfiles.ino
+│   │       │       │   └── ReadWrite
+│   │       │       │       └── ReadWrite.ino
+│   │       │       ├── keywords.txt
+│   │       │       ├── library.properties
+│   │       │       ├── README.adoc
+│   │       │       └── src
+│   │       │           ├── File.cpp
+│   │       │           ├── README.txt
+│   │       │           ├── SD.cpp
+│   │       │           ├── SD.h
+│   │       │           └── utility
+│   │       │               ├── FatStructs.h
+│   │       │               ├── Sd2Card.cpp
+│   │       │               ├── Sd2Card.h
+│   │       │               ├── Sd2PinMap.h
+│   │       │               ├── SdFat.h
+│   │       │               ├── SdFatmainpage.h
+│   │       │               ├── SdFatUtil.h
+│   │       │               ├── SdFile.cpp
+│   │       │               ├── SdInfo.h
+│   │       │               └── SdVolume.cpp
+│   │       └── SD_1.2.1
+│   │           └── SD
+│   │               ├── examples
+│   │               │   ├── CardInfo
+│   │               │   │   └── CardInfo.ino
+│   │               │   ├── Datalogger
+│   │               │   │   └── Datalogger.ino
+│   │               │   ├── DumpFile
+│   │               │   │   └── DumpFile.ino
+│   │               │   ├── Files
+│   │               │   │   └── Files.ino
+│   │               │   ├── listfiles
+│   │               │   │   └── listfiles.ino
+│   │               │   └── ReadWrite
+│   │               │       └── ReadWrite.ino
+│   │               ├── keywords.txt
+│   │               ├── library.properties
+│   │               ├── README.adoc
+│   │               └── src
+│   │                   ├── File.cpp
+│   │                   ├── README.txt
+│   │                   ├── SD.cpp
+│   │                   ├── SD.h
+│   │                   └── utility
+│   │                       ├── FatStructs.h
+│   │                       ├── Sd2Card.cpp
+│   │                       ├── Sd2Card.h
+│   │                       ├── Sd2PinMap.h
+│   │                       ├── SdFat.h
+│   │                       ├── SdFatmainpage.h
+│   │                       ├── SdFatUtil.h
+│   │                       ├── SdFile.cpp
+│   │                       ├── SdInfo.h
+│   │                       └── SdVolume.cpp
+│   └── test-lib
+│       ├── fest-assert-1.2.jar
+│       ├── fest.LICENSE.ASL-2.0.txt
+│       ├── fest-reflect-1.2.jar
+│       ├── fest-swing-1.2.jar
+│       ├── fest-util-1.1.2.jar
+│       ├── jcip-annotations-1.0.jar
+│       ├── jcip-annotations.LICENSE.cc-by.2.5.txt
+│       ├── junit-4.11.jar
+│       └── junit.LICENSE.EPL-1.0.txt
+├── arduino-core
+│   ├── build.xml
+│   ├── lib
+│   │   ├── apple.jar
+│   │   ├── apple.LICENSE.BSD-like.txt
+│   │   ├── bcpg-jdk15on-152.jar
+│   │   ├── bcprov-jdk15on-152.jar
+│   │   ├── commons-codec-1.7.jar
+│   │   ├── commons-compress-1.8.jar
+│   │   ├── commons-compress.LICENSE.ASL-2.0.txt
+│   │   ├── commons-exec-1.1.jar
+│   │   ├── commons-exec.LICENSE.ASL-2.0.txt
+│   │   ├── commons-io-2.6.jar
+│   │   ├── commons-lang3-3.8.1.jar
+│   │   ├── commons-lang3.LICENSE.ASL-2.0.txt
+│   │   ├── commons-logging-1.0.4.jar
+│   │   ├── commons-logging.LICENSE.ASL-2.0.txt
+│   │   ├── commons-net-3.3.jar
+│   │   ├── commons-net.LICENSE.ASL-2.0.txt
+│   │   ├── jackson-annotations-2.9.5.jar
+│   │   ├── jackson-core-2.9.5.jar
+│   │   ├── jackson-databind-2.9.5.jar
+│   │   ├── java-semver-0.8.0.jar
+│   │   ├── java-semver.LICENSE.MIT.txt
+│   │   ├── jmdns-3.5.5.jar
+│   │   ├── jmdns.LICENSE.ASL-2.0-LGPL-2.1.txt
+│   │   ├── jna-4.2.2.jar
+│   │   ├── jna-platform-4.2.2.jar
+│   │   ├── jsch-0.1.50.jar
+│   │   ├── jsch.LICENSE.BSD.txt
+│   │   ├── jssc-2.8.0-arduino4.jar
+│   │   ├── jssc.LICENSE.GPL.txt
+│   │   ├── jssc.LICENSE.LGPL.txt
+│   │   ├── log4j-api-2.12.0.jar
+│   │   ├── log4j-core-2.12.0.jar
+│   │   ├── slf4j-api-1.7.22.jar
+│   │   └── slf4j-simple-1.7.22.jar
+│   └── src
+│       ├── cc
+│       │   └── arduino
+│       │       ├── Compiler.java
+│       │       ├── CompilerProgressListener.java
+│       │       ├── CompilerUtils.java
+│       │       ├── Constants.java
+│       │       ├── contributions
+│       │       │   ├── ConsoleProgressListener.java
+│       │       │   ├── DownloadableContribution.java
+│       │       │   ├── DownloadableContributionsDownloader.java
+│       │       │   ├── DownloadableContributionVersionComparator.java
+│       │       │   ├── filters
+│       │       │   │   └── DownloadableContributionWithVersionPredicate.java
+│       │       │   ├── GPGDetachedSignatureVerifier.java
+│       │       │   ├── GZippedJsonDownloader.java
+│       │       │   ├── JsonDownloader.java
+│       │       │   ├── libraries
+│       │       │   │   ├── ContributedLibraryDependency.java
+│       │       │   │   ├── ContributedLibrary.java
+│       │       │   │   ├── ContributedLibraryReleases.java
+│       │       │   │   ├── LibrariesIndexer.java
+│       │       │   │   ├── LibrariesIndex.java
+│       │       │   │   ├── LibraryInstaller.java
+│       │       │   │   └── UnavailableContributedLibrary.java
+│       │       │   ├── NoopProgressListener.java
+│       │       │   ├── packages
+│       │       │   │   ├── ContributedBoard.java
+│       │       │   │   ├── ContributedHelp.java
+│       │       │   │   ├── ContributedPackage.java
+│       │       │   │   ├── ContributedPlatform.java
+│       │       │   │   ├── ContributedTargetPackage.java
+│       │       │   │   ├── ContributedTargetPlatform.java
+│       │       │   │   ├── ContributedTool.java
+│       │       │   │   ├── ContributedToolReference.java
+│       │       │   │   ├── ContributionInstaller.java
+│       │       │   │   ├── ContributionsIndexer.java
+│       │       │   │   ├── ContributionsIndex.java
+│       │       │   │   ├── filters
+│       │       │   │   │   └── PlatformArchitecturePredicate.java
+│       │       │   │   ├── HostDependentDownloadableContribution.java
+│       │       │   │   ├── PackageIndexFilenameFilter.java
+│       │       │   │   └── TestPackageIndexFilenameFilter.java
+│       │       │   ├── ProgressListener.java
+│       │       │   ├── SignatureVerifier.java
+│       │       │   ├── VersionComparator.java
+│       │       │   └── VersionHelper.java
+│       │       ├── DefaultUncaughtExceptionHandler.java
+│       │       ├── files
+│       │       │   └── DeleteFilesOnShutdown.java
+│       │       ├── filters
+│       │       │   └── FileExecutablePredicate.java
+│       │       ├── i18n
+│       │       │   ├── ExternalProcessOutputParser.java
+│       │       │   ├── I18NAwareMessageConsumer.java
+│       │       │   ├── Language.java
+│       │       │   └── Languages.java
+│       │       ├── LoadVIDPIDSpecificPreferences.java
+│       │       ├── MessageConsumerOutputStream.java
+│       │       ├── MyStreamPumper.java
+│       │       ├── net
+│       │       │   ├── CustomProxySelector.java
+│       │       │   └── PACSupportMethods.java
+│       │       ├── os
+│       │       │   └── windows
+│       │       │       └── Win32KnownFolders.java
+│       │       ├── packages
+│       │       │   ├── BoardPort.java
+│       │       │   ├── discoverers
+│       │       │   │   ├── network
+│       │       │   │   │   └── BoardReachabilityFilter.java
+│       │       │   │   ├── NetworkDiscovery.java
+│       │       │   │   ├── PluggableDiscovery.java
+│       │       │   │   ├── PluggableDiscoveryMessage.java
+│       │       │   │   └── serial
+│       │       │   │       └── SerialDiscovery.java
+│       │       │   ├── Discovery.java
+│       │       │   ├── DiscoveryManager.java
+│       │       │   ├── ssh
+│       │       │   │   ├── NoInteractionUserInfo.java
+│       │       │   │   ├── SCP.java
+│       │       │   │   ├── SSHClientSetupChainRing.java
+│       │       │   │   ├── SSHConfigFileSetup.java
+│       │       │   │   ├── SSH.java
+│       │       │   │   └── SSHPwdSetup.java
+│       │       │   ├── UploaderFactory.java
+│       │       │   ├── Uploader.java
+│       │       │   └── uploaders
+│       │       │       ├── GenericNetworkUploader.java
+│       │       │       ├── MergeSketchWithBooloader.java
+│       │       │       ├── SerialUploader.java
+│       │       │       └── SSHUploader.java
+│       │       ├── ProgressAwareMessageConsumer.java
+│       │       ├── UploaderUtils.java
+│       │       └── utils
+│       │           ├── ArchiveExtractor.java
+│       │           ├── FileHash.java
+│       │           ├── MultiStepProgress.java
+│       │           ├── network
+│       │           │   ├── CacheControl.java
+│       │           │   ├── FileDownloaderCache.java
+│       │           │   ├── FileDownloader.java
+│       │           │   └── HttpConnectionManager.java
+│       │           ├── Pair.java
+│       │           ├── Progress.java
+│       │           └── ReverseComparator.java
+│       ├── edazdarevic
+│       │   └── commons
+│       │       └── net
+│       │           └── CIDRUtils.java
+│       └── processing
+│           └── app
+│               ├── BaseNoGui.java
+│               ├── debug
+│               │   ├── LegacyTargetBoard.java
+│               │   ├── LegacyTargetPackage.java
+│               │   ├── LegacyTargetPlatform.java
+│               │   ├── MessageConsumer.java
+│               │   ├── MessageSiphon.java
+│               │   ├── RunnerException.java
+│               │   ├── Sizer.java
+│               │   ├── TargetBoard.java
+│               │   ├── TargetPackage.java
+│               │   ├── TargetPlatformException.java
+│               │   └── TargetPlatform.java
+│               ├── helpers
+│               │   ├── BasicUserNotifier.java
+│               │   ├── BoardCloudResolver.java
+│               │   ├── CommandlineParser.java
+│               │   ├── filefilters
+│               │   │   ├── OnlyDirs.java
+│               │   │   └── OnlyFilesWithExtension.java
+│               │   ├── FileUtils.java
+│               │   ├── NetUtils.java
+│               │   ├── OSUtils.java
+│               │   ├── PreferencesHelper.java
+│               │   ├── PreferencesMapException.java
+│               │   ├── PreferencesMap.java
+│               │   ├── ProcessUtils.java
+│               │   ├── StringReplacer.java
+│               │   └── UserNotifier.java
+│               ├── i18n
+│               │   ├── pull.sh
+│               │   ├── push.sh
+│               │   ├── python
+│               │   │   ├── pull.py
+│               │   │   ├── push.py
+│               │   │   ├── requests
+│               │   │   │   ├── adapters.py
+│               │   │   │   ├── api.py
+│               │   │   │   ├── auth.py
+│               │   │   │   ├── cacert.pem
+│               │   │   │   ├── certs.py
+│               │   │   │   ├── compat.py
+│               │   │   │   ├── cookies.py
+│               │   │   │   ├── exceptions.py
+│               │   │   │   ├── hooks.py
+│               │   │   │   ├── __init__.py
+│               │   │   │   ├── models.py
+│               │   │   │   ├── packages
+│               │   │   │   │   ├── charade
+│               │   │   │   │   │   ├── big5freq.py
+│               │   │   │   │   │   ├── big5prober.py
+│               │   │   │   │   │   ├── chardistribution.py
+│               │   │   │   │   │   ├── charsetgroupprober.py
+│               │   │   │   │   │   ├── charsetprober.py
+│               │   │   │   │   │   ├── codingstatemachine.py
+│               │   │   │   │   │   ├── compat.py
+│               │   │   │   │   │   ├── constants.py
+│               │   │   │   │   │   ├── escprober.py
+│               │   │   │   │   │   ├── escsm.py
+│               │   │   │   │   │   ├── eucjpprober.py
+│               │   │   │   │   │   ├── euckrfreq.py
+│               │   │   │   │   │   ├── euckrprober.py
+│               │   │   │   │   │   ├── euctwfreq.py
+│               │   │   │   │   │   ├── euctwprober.py
+│               │   │   │   │   │   ├── gb2312freq.py
+│               │   │   │   │   │   ├── gb2312prober.py
+│               │   │   │   │   │   ├── hebrewprober.py
+│               │   │   │   │   │   ├── __init__.py
+│               │   │   │   │   │   ├── jisfreq.py
+│               │   │   │   │   │   ├── jpcntx.py
+│               │   │   │   │   │   ├── langbulgarianmodel.py
+│               │   │   │   │   │   ├── langcyrillicmodel.py
+│               │   │   │   │   │   ├── langgreekmodel.py
+│               │   │   │   │   │   ├── langhebrewmodel.py
+│               │   │   │   │   │   ├── langhungarianmodel.py
+│               │   │   │   │   │   ├── langthaimodel.py
+│               │   │   │   │   │   ├── latin1prober.py
+│               │   │   │   │   │   ├── mbcharsetprober.py
+│               │   │   │   │   │   ├── mbcsgroupprober.py
+│               │   │   │   │   │   ├── mbcssm.py
+│               │   │   │   │   │   ├── sbcharsetprober.py
+│               │   │   │   │   │   ├── sbcsgroupprober.py
+│               │   │   │   │   │   ├── sjisprober.py
+│               │   │   │   │   │   ├── universaldetector.py
+│               │   │   │   │   │   └── utf8prober.py
+│               │   │   │   │   ├── __init__.py
+│               │   │   │   │   └── urllib3
+│               │   │   │   │       ├── _collections.py
+│               │   │   │   │       ├── connectionpool.py
+│               │   │   │   │       ├── contrib
+│               │   │   │   │       │   ├── __init__.py
+│               │   │   │   │       │   └── ntlmpool.py
+│               │   │   │   │       ├── exceptions.py
+│               │   │   │   │       ├── filepost.py
+│               │   │   │   │       ├── __init__.py
+│               │   │   │   │       ├── packages
+│               │   │   │   │       │   ├── __init__.py
+│               │   │   │   │       │   ├── ordered_dict.py
+│               │   │   │   │       │   ├── six.py
+│               │   │   │   │       │   └── ssl_match_hostname
+│               │   │   │   │       │       └── __init__.py
+│               │   │   │   │       ├── poolmanager.py
+│               │   │   │   │       ├── request.py
+│               │   │   │   │       ├── response.py
+│               │   │   │   │       └── util.py
+│               │   │   │   ├── sessions.py
+│               │   │   │   ├── status_codes.py
+│               │   │   │   ├── structures.py
+│               │   │   │   └── utils.py
+│               │   │   ├── transifex.py
+│               │   │   └── update.py
+│               │   ├── README.md
+│               │   ├── Resources_ach.po
+│               │   ├── Resources_ach.properties
+│               │   ├── Resources_af.po
+│               │   ├── Resources_af.properties
+│               │   ├── Resources_an.po
+│               │   ├── Resources_an.properties
+│               │   ├── Resources_ar.po
+│               │   ├── Resources_ar.properties
+│               │   ├── Resources_ast.po
+│               │   ├── Resources_ast.properties
+│               │   ├── Resources_be.po
+│               │   ├── Resources_be.properties
+│               │   ├── Resources_bg.po
+│               │   ├── Resources_bg.properties
+│               │   ├── Resources_bs.po
+│               │   ├── Resources_bs.properties
+│               │   ├── Resources_ca.po
+│               │   ├── Resources_ca.properties
+│               │   ├── Resources_cs_CZ.po
+│               │   ├── Resources_cs_CZ.properties
+│               │   ├── Resources_da_DK.po
+│               │   ├── Resources_da_DK.properties
+│               │   ├── Resources_de_DE.po
+│               │   ├── Resources_de_DE.properties
+│               │   ├── Resources_el_GR.po
+│               │   ├── Resources_el_GR.properties
+│               │   ├── Resources_en_GB.po
+│               │   ├── Resources_en_GB.properties
+│               │   ├── Resources_en.po
+│               │   ├── Resources_en.properties
+│               │   ├── Resources_es.po
+│               │   ├── Resources_es.properties
+│               │   ├── Resources_et.po
+│               │   ├── Resources_et.properties
+│               │   ├── Resources_eu.po
+│               │   ├── Resources_eu.properties
+│               │   ├── Resources_fa_IR.po
+│               │   ├── Resources_fa_IR.properties
+│               │   ├── Resources_fa.po
+│               │   ├── Resources_fa.properties
+│               │   ├── Resources_fil.po
+│               │   ├── Resources_fil.properties
+│               │   ├── Resources_fi.po
+│               │   ├── Resources_fi.properties
+│               │   ├── Resources_fr_CA.po
+│               │   ├── Resources_fr_CA.properties
+│               │   ├── Resources_fr.po
+│               │   ├── Resources_fr.properties
+│               │   ├── Resources_fy.po
+│               │   ├── Resources_fy.properties
+│               │   ├── Resources_gl_ES.po
+│               │   ├── Resources_gl_ES.properties
+│               │   ├── Resources_gl.po
+│               │   ├── Resources_gl.properties
+│               │   ├── Resources_hi.po
+│               │   ├── Resources_hi.properties
+│               │   ├── Resources_hr_HR.po
+│               │   ├── Resources_hr_HR.properties
+│               │   ├── Resources_hu.po
+│               │   ├── Resources_hu.properties
+│               │   ├── Resources_hy.po
+│               │   ├── Resources_hy.properties
+│               │   ├── Resources_in.po
+│               │   ├── Resources_in.properties
+│               │   ├── Resources_it_IT.po
+│               │   ├── Resources_it_IT.properties
+│               │   ├── Resources_iw.po
+│               │   ├── Resources_iw.properties
+│               │   ├── Resources_ja_JP.po
+│               │   ├── Resources_ja_JP.properties
+│               │   ├── Resources_ka_GE.po
+│               │   ├── Resources_ka_GE.properties
+│               │   ├── Resources_kk.po
+│               │   ├── Resources_kk.properties
+│               │   ├── Resources_ko_KR.po
+│               │   ├── Resources_ko_KR.properties
+│               │   ├── Resources_lt_LT.po
+│               │   ├── Resources_lt_LT.properties
+│               │   ├── Resources_lv_LV.po
+│               │   ├── Resources_lv_LV.properties
+│               │   ├── Resources_mr.po
+│               │   ├── Resources_mr.properties
+│               │   ├── Resources_my_MM.po
+│               │   ├── Resources_my_MM.properties
+│               │   ├── Resources_nb_NO.po
+│               │   ├── Resources_nb_NO.properties
+│               │   ├── Resources_ne.po
+│               │   ├── Resources_ne.properties
+│               │   ├── Resources_nl_NL.po
+│               │   ├── Resources_nl_NL.properties
+│               │   ├── Resources_nl.po
+│               │   ├── Resources_nl.properties
+│               │   ├── Resources_pl.po
+│               │   ├── Resources_pl.properties
+│               │   ├── Resources_pt_BR.po
+│               │   ├── Resources_pt_BR.properties
+│               │   ├── Resources_pt.po
+│               │   ├── Resources_pt.properties
+│               │   ├── Resources_pt_PT.po
+│               │   ├── Resources_pt_PT.properties
+│               │   ├── Resources_ro.po
+│               │   ├── Resources_ro.properties
+│               │   ├── Resources_ru.po
+│               │   ├── Resources_ru.properties
+│               │   ├── Resources_sk.po
+│               │   ├── Resources_sk.properties
+│               │   ├── Resources_sl_SI.po
+│               │   ├── Resources_sl_SI.properties
+│               │   ├── Resources_sq.po
+│               │   ├── Resources_sq.properties
+│               │   ├── Resources_sv.po
+│               │   ├── Resources_sv.properties
+│               │   ├── Resources_ta.po
+│               │   ├── Resources_ta.properties
+│               │   ├── Resources_te.po
+│               │   ├── Resources_te.properties
+│               │   ├── Resources_th.po
+│               │   ├── Resources_th.properties
+│               │   ├── Resources_tr.po
+│               │   ├── Resources_tr.properties
+│               │   ├── Resources_tzl.po
+│               │   ├── Resources_tzl.properties
+│               │   ├── Resources_uk.po
+│               │   ├── Resources_uk.properties
+│               │   ├── Resources_vi.po
+│               │   ├── Resources_vi.properties
+│               │   ├── Resources_zh_CN.po
+│               │   ├── Resources_zh_CN.properties
+│               │   ├── Resources_zh_TW.Big5.po
+│               │   ├── Resources_zh_TW.Big5.properties
+│               │   ├── Resources_zh_TW.po
+│               │   ├── Resources_zh_TW.properties
+│               │   └── update.sh
+│               ├── I18n.java
+│               ├── legacy
+│               │   ├── PApplet.java
+│               │   └── PConstants.java
+│               ├── linux
+│               │   ├── GTKLookAndFeelFixer.java
+│               │   ├── Platform.java
+│               │   └── UDevAdmParser.java
+│               ├── macosx
+│               │   ├── Platform.java
+│               │   └── SystemProfilerParser.java
+│               ├── packages
+│               │   ├── LegacyUserLibrary.java
+│               │   ├── LibraryList.java
+│               │   ├── UserLibraryFolder.java
+│               │   ├── UserLibrary.java
+│               │   └── UserLibraryPriorityComparator.java
+│               ├── Platform.java
+│               ├── PreferencesData.java
+│               ├── SerialException.java
+│               ├── Serial.java
+│               ├── SerialNotFoundException.java
+│               ├── SerialPortList.java
+│               ├── SketchFile.java
+│               ├── Sketch.java
+│               ├── tools
+│               │   └── DoubleQuotedArgumentsOnWindowsCommandLine.java
+│               └── windows
+│                   ├── ListComPortsParser.java
+│                   └── Platform.java
+├── build
+│   ├── Adafruit_Circuit_Playground-1.10.4.zip.sha
+│   ├── arduino-builder-linux32-1.5.4.tar.bz2.sha
+│   ├── arduino-builder-linux64-1.5.4.tar.bz2.sha
+│   ├── arduino-builder-linuxaarch64-1.5.4.tar.bz2.sha
+│   ├── arduino-builder-linuxarm-1.5.4.tar.bz2.sha
+│   ├── arduino-builder-macosx-1.5.4-signed.tar.bz2.sha
+│   ├── arduino-builder-windows-1.5.4.zip.sha
+│   ├── avr-1.8.3.tar.bz2.sha
+│   ├── Bridge-1.7.0.zip.sha
+│   ├── build_all_dist.bash
+│   ├── build_pull_request.bash
+│   ├── build.xml
+│   ├── compile_everything.bash
+│   ├── create_reference.pl
+│   ├── Esplora-1.0.4.zip.sha
+│   ├── Ethernet-2.0.0.zip.sha
+│   ├── fetch.sh
+│   ├── Firmata-2.5.8.zip.sha
+│   ├── GSM-1.0.6.zip.sha
+│   ├── Keyboard-1.0.2.zip.sha
+│   ├── libastylej-2.05.1-5.zip.sha
+│   ├── liblistSerials-1.4.2-2.zip.sha
+│   ├── linux
+│   │   ├── arduinoOTA-1.1.1-linux_aarch64.tar.bz2.sha
+│   │   ├── arduinoOTA-1.2.1-linux_386.tar.bz2.sha
+│   │   ├── arduinoOTA-1.2.1-linux_aarch64.tar.bz2.sha
+│   │   ├── arduinoOTA-1.2.1-linux_amd64.tar.bz2.sha
+│   │   ├── arduinoOTA-1.2.1-linux_arm.tar.bz2.sha
+│   │   ├── arduinoOTA-1.3.0-linux_386.tar.bz2.sha
+│   │   ├── arduinoOTA-1.3.0-linux_aarch64.tar.bz2.sha
+│   │   ├── arduinoOTA-1.3.0-linux_amd64.tar.bz2.sha
+│   │   ├── arduinoOTA-1.3.0-linux_arm.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino14-aarch64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino14-armhf-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino14-i686-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino14-x86_64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino17-aarch64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino17-armhf-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino17-i686-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino17-x86_64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino9-aarch64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avr-gcc-4.9.2-atmel3.5.4-arduino2-aarch64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avr-gcc-5.4.0-atmel3.6.1-arduino2-aarch64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avr-gcc-5.4.0-atmel3.6.1-arduino2-armhf-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avr-gcc-5.4.0-atmel3.6.1-arduino2-i686-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avr-gcc-5.4.0-atmel3.6.1-arduino2-x86_64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avr-gcc-7.3.0-atmel3.6.1-arduino7-aarch64-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avr-gcc-7.3.0-atmel3.6.1-arduino7-arm-linux-gnueabihf.tar.bz2.sha
+│   │   ├── avr-gcc-7.3.0-atmel3.6.1-arduino7-i686-pc-linux-gnu.tar.bz2.sha
+│   │   ├── avr-gcc-7.3.0-atmel3.6.1-arduino7-x86_64-pc-linux-gnu.tar.bz2.sha
+│   │   └── dist
+│   │       ├── appdata.xml
+│   │       ├── arduino
+│   │       ├── arduino-linux-setup.sh
+│   │       ├── desktop.template
+│   │       ├── gcc-arm-none-eabi-4.8.3-2014q1-linux32.tar.gz.sha
+│   │       ├── gcc-arm-none-eabi-4.8.3-2014q1-linux64.tar.gz.sha
+│   │       ├── install.sh
+│   │       ├── mime.xml
+│   │       └── uninstall.sh
+│   ├── LiquidCrystal-1.0.7.zip.sha
+│   ├── macosx
+│   │   ├── appbundler-1.0ea-arduino8.jar.zip.sha
+│   │   ├── arduinoOTA-1.3.0-darwin_amd64-signed.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino14-i386-apple-darwin11.tar.bz2.sha
+│   │   ├── avrdude-6.3.0-arduino17-x86_64-apple-darwin12-signed.tar.bz2.sha
+│   │   ├── avr-gcc-5.4.0-atmel3.6.1-arduino2-i386-apple-darwin11.tar.bz2.sha
+│   │   ├── avr-gcc-7.3.0-atmel3.6.1-arduino7-x86_64-apple-darwin14-signed.tar.bz2.sha
+│   │   ├── dist
+│   │   │   ├── drivers
+│   │   │   │   └── SiliconLabs-CP2105
+│   │   │   │       ├── ReleaseNotes.txt
+│   │   │   │       ├── Silicon Labs VCP Driver.pkg
+│   │   │   │       └── uninstaller.sh
+│   │   │   └── gcc-arm-none-eabi-4.8.3-2014q1-mac.tar.gz.sha
+│   │   ├── gcc.entitlements
+│   │   ├── jre2.entitlements
+│   │   ├── mkdmg
+│   │   ├── pde.icns
+│   │   └── processing.icns
+│   ├── Mouse-1.0.1.zip.sha
+│   ├── readme.md
+│   ├── Robot_Control-1.0.4.zip.sha
+│   ├── RobotIRremote-2.0.0.zip.sha
+│   ├── Robot_Motor-1.0.3.zip.sha
+│   ├── SD-1.2.4.zip.sha
+│   ├── Servo-1.1.6.zip.sha
+│   ├── shared
+│   │   ├── ArduinoSerialPlotterProtocol.md
+│   │   ├── ArduinoSerialPlotterProtocol.pdf
+│   │   ├── examples
+│   │   │   ├── 01.Basics
+│   │   │   │   ├── AnalogReadSerial
+│   │   │   │   │   ├── AnalogReadSerial.ino
+│   │   │   │   │   ├── AnalogReadSerial.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── BareMinimum
+│   │   │   │   │   ├── BareMinimum.ino
+│   │   │   │   │   └── BareMinimum.txt
+│   │   │   │   ├── Blink
+│   │   │   │   │   ├── Blink.ino
+│   │   │   │   │   └── Blink.txt
+│   │   │   │   ├── DigitalReadSerial
+│   │   │   │   │   ├── DigitalReadSerial.ino
+│   │   │   │   │   ├── DigitalReadSerial.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Fade
+│   │   │   │   │   ├── Fade.ino
+│   │   │   │   │   ├── Fade.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   └── ReadAnalogVoltage
+│   │   │   │       ├── layout.png
+│   │   │   │       ├── ReadAnalogVoltage.ino
+│   │   │   │       ├── ReadAnalogVoltage.txt
+│   │   │   │       └── schematic.png
+│   │   │   ├── 02.Digital
+│   │   │   │   ├── BlinkWithoutDelay
+│   │   │   │   │   ├── BlinkWithoutDelay.ino
+│   │   │   │   │   ├── BlinkWithoutDelay.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Button
+│   │   │   │   │   ├── Button.ino
+│   │   │   │   │   ├── Button.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Debounce
+│   │   │   │   │   ├── button.png
+│   │   │   │   │   ├── Debounce.ino
+│   │   │   │   │   ├── Debounce.txt
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── DigitalInputPullup
+│   │   │   │   │   ├── DigitalInputPullup.ino
+│   │   │   │   │   ├── DigitalInputPullup.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── StateChangeDetection
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── schematic.png
+│   │   │   │   │   ├── StateChangeDetection.ino
+│   │   │   │   │   └── StateChangeDetection.txt
+│   │   │   │   ├── toneKeyboard
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── pitches.h
+│   │   │   │   │   ├── schematic.png
+│   │   │   │   │   ├── toneKeyboard.ino
+│   │   │   │   │   └── toneKeyboard.txt
+│   │   │   │   ├── toneMelody
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── pitches.h
+│   │   │   │   │   ├── schematic.png
+│   │   │   │   │   ├── toneMelody.ino
+│   │   │   │   │   └── toneMelody.txt
+│   │   │   │   ├── toneMultiple
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── schematic.png
+│   │   │   │   │   ├── toneMultiple.ino
+│   │   │   │   │   └── toneMultiple.txt
+│   │   │   │   └── tonePitchFollower
+│   │   │   │       ├── layout.png
+│   │   │   │       ├── schematic.png
+│   │   │   │       ├── tonePitchFollower.ino
+│   │   │   │       └── tonePitchFollower.txt
+│   │   │   ├── 03.Analog
+│   │   │   │   ├── AnalogInOutSerial
+│   │   │   │   │   ├── AnalogInOutSerial.ino
+│   │   │   │   │   ├── AnalogInOutSerial.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── AnalogInput
+│   │   │   │   │   ├── AnalogInput.ino
+│   │   │   │   │   ├── AnalogInput.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── AnalogWriteMega
+│   │   │   │   │   ├── AnalogWriteMega.ino
+│   │   │   │   │   ├── AnalogWriteMega.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Calibration
+│   │   │   │   │   ├── Calibration.ino
+│   │   │   │   │   ├── Calibration.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Fading
+│   │   │   │   │   ├── Fading.ino
+│   │   │   │   │   ├── Fading.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   └── Smoothing
+│   │   │   │       ├── layout.png
+│   │   │   │       ├── schematic.png
+│   │   │   │       ├── Smoothing.ino
+│   │   │   │       └── Smoothing.txt
+│   │   │   ├── 04.Communication
+│   │   │   │   ├── ASCIITable
+│   │   │   │   │   ├── ASCIITable.ino
+│   │   │   │   │   └── ASCIITable.txt
+│   │   │   │   ├── Dimmer
+│   │   │   │   │   ├── Dimmer.ino
+│   │   │   │   │   ├── Dimmer.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Graph
+│   │   │   │   │   ├── Graph.ino
+│   │   │   │   │   ├── Graph.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Midi
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── Midi.ino
+│   │   │   │   │   ├── MIDI.txt
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── MultiSerial
+│   │   │   │   │   ├── MultiSerial.ino
+│   │   │   │   │   └── MultiSerial.txt
+│   │   │   │   ├── PhysicalPixel
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── PhysicalPixel.ino
+│   │   │   │   │   ├── PhysicalPixel.txt
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── ReadASCIIString
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── ReadASCIIString.ino
+│   │   │   │   │   └── ReadASCIIString.txt
+│   │   │   │   ├── SerialCallResponse
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── schematic.png
+│   │   │   │   │   ├── SerialCallResponse.ino
+│   │   │   │   │   └── SerialCallResponse.txt
+│   │   │   │   ├── SerialCallResponseASCII
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── schematic.png
+│   │   │   │   │   ├── SerialCallResponseASCII.ino
+│   │   │   │   │   └── SerialCallResponseASCII.txt
+│   │   │   │   ├── SerialEvent
+│   │   │   │   │   ├── SerialEvent.ino
+│   │   │   │   │   └── SerialEvent.txt
+│   │   │   │   ├── SerialPassthrough
+│   │   │   │   │   └── SerialPassthrough.ino
+│   │   │   │   └── VirtualColorMixer
+│   │   │   │       ├── layout.png
+│   │   │   │       ├── schematic.png
+│   │   │   │       ├── VirtualColorMixer.ino
+│   │   │   │       └── VirtualColorMixer.txt
+│   │   │   ├── 05.Control
+│   │   │   │   ├── Arrays
+│   │   │   │   │   ├── Arrays.ino
+│   │   │   │   │   ├── Arrays.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── ForLoopIteration
+│   │   │   │   │   ├── ForLoopIteration.ino
+│   │   │   │   │   ├── ForLoopIteration.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── IfStatementConditional
+│   │   │   │   │   ├── IfStatementConditional.ino
+│   │   │   │   │   ├── IfStatementConditional.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── switchCase
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── schematic.png
+│   │   │   │   │   ├── switchCase.ino
+│   │   │   │   │   └── switchCase.txt
+│   │   │   │   ├── switchCase2
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── schematic.png
+│   │   │   │   │   ├── switchCase2.ino
+│   │   │   │   │   └── switchCase2.txt
+│   │   │   │   └── WhileStatementConditional
+│   │   │   │       ├── layout.png
+│   │   │   │       ├── schematic.png
+│   │   │   │       ├── WhileStatementConditional.ino
+│   │   │   │       └── WhileStatementConditional.txt
+│   │   │   ├── 06.Sensors
+│   │   │   │   ├── ADXL3xx
+│   │   │   │   │   ├── ADXL3xx.ino
+│   │   │   │   │   ├── ADXL3xx.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Knock
+│   │   │   │   │   ├── Knock.ino
+│   │   │   │   │   ├── Knock.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   ├── Memsic2125
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── Memsic2125.ino
+│   │   │   │   │   ├── Memsic2125.txt
+│   │   │   │   │   └── schematic.png
+│   │   │   │   └── Ping
+│   │   │   │       ├── layout.png
+│   │   │   │       ├── Ping.ino
+│   │   │   │       ├── Ping.txt
+│   │   │   │       └── schematic.png
+│   │   │   ├── 07.Display
+│   │   │   │   ├── barGraph
+│   │   │   │   │   ├── barGraph.ino
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   ├── LEDBarGraph.txt
+│   │   │   │   │   └── schematic.png
+│   │   │   │   └── RowColumnScanning
+│   │   │   │       ├── layout.png
+│   │   │   │       ├── RowColumnScanning.ino
+│   │   │   │       ├── RowColumnScanning.txt
+│   │   │   │       └── schematic.png
+│   │   │   ├── 08.Strings
+│   │   │   │   ├── CharacterAnalysis
+│   │   │   │   │   └── CharacterAnalysis.ino
+│   │   │   │   ├── StringAdditionOperator
+│   │   │   │   │   ├── StringAdditionOperator.ino
+│   │   │   │   │   └── StringAdditionOperator.txt
+│   │   │   │   ├── StringAppendOperator
+│   │   │   │   │   └── StringAppendOperator.ino
+│   │   │   │   ├── StringCaseChanges
+│   │   │   │   │   ├── StringCaseChanges.ino
+│   │   │   │   │   └── StringCaseChanges.txt
+│   │   │   │   ├── StringCharacters
+│   │   │   │   │   ├── StringCharacters.ino
+│   │   │   │   │   └── StringCharacters.txt
+│   │   │   │   ├── StringComparisonOperators
+│   │   │   │   │   ├── StringComparisonOperators.ino
+│   │   │   │   │   └── StringComparisonOperators.txt
+│   │   │   │   ├── StringConstructors
+│   │   │   │   │   ├── StringConstructors.ino
+│   │   │   │   │   └── StringConstructors.txt
+│   │   │   │   ├── StringIndexOf
+│   │   │   │   │   ├── StringIndexOf.ino
+│   │   │   │   │   └── StringIndexOf.txt
+│   │   │   │   ├── StringLength
+│   │   │   │   │   ├── StringLength.ino
+│   │   │   │   │   └── StringLength.txt
+│   │   │   │   ├── StringLengthTrim
+│   │   │   │   │   ├── StringLengthTrim.ino
+│   │   │   │   │   └── StringLengthTrim.txt
+│   │   │   │   ├── StringReplace
+│   │   │   │   │   ├── StringReplace.ino
+│   │   │   │   │   └── StringReplace.txt
+│   │   │   │   ├── StringStartsWithEndsWith
+│   │   │   │   │   ├── StringStartsWithEndsWith.ino
+│   │   │   │   │   └── StringStartsWithEndsWith.txt
+│   │   │   │   ├── StringSubstring
+│   │   │   │   │   ├── StringSubstring.ino
+│   │   │   │   │   └── StringSubstring.txt
+│   │   │   │   └── StringToInt
+│   │   │   │       └── StringToInt.ino
+│   │   │   ├── 09.USB
+│   │   │   │   ├── Keyboard
+│   │   │   │   │   ├── KeyboardLogout
+│   │   │   │   │   │   ├── KeyboardLogout.ino
+│   │   │   │   │   │   └── KeyboardLogout.txt
+│   │   │   │   │   ├── KeyboardMessage
+│   │   │   │   │   │   ├── KeyboardMessage.ino
+│   │   │   │   │   │   ├── KeyboardMessage.txt
+│   │   │   │   │   │   ├── layout.png
+│   │   │   │   │   │   └── schematic.png
+│   │   │   │   │   ├── KeyboardReprogram
+│   │   │   │   │   │   ├── KeyboardReprogram.ino
+│   │   │   │   │   │   └── KeyboardReprogram.txt
+│   │   │   │   │   └── KeyboardSerial
+│   │   │   │   │       ├── KeyboardSerial.ino
+│   │   │   │   │       └── KeyboardSerial.txt
+│   │   │   │   ├── KeyboardAndMouseControl
+│   │   │   │   │   ├── KeyboardAndMouseControl.ino
+│   │   │   │   │   ├── KeyboardAndMouseControl.txt
+│   │   │   │   │   ├── layout.png
+│   │   │   │   │   └── schematic.png
+│   │   │   │   └── Mouse
+│   │   │   │       ├── ButtonMouseControl
+│   │   │   │       │   ├── ButtonMouseControl.ino
+│   │   │   │       │   ├── ButtonMouseControl.txt
+│   │   │   │       │   ├── layout.png
+│   │   │   │       │   └── schematic.png
+│   │   │   │       └── JoystickMouseControl
+│   │   │   │           ├── JoystickMouseControl.ino
+│   │   │   │           ├── JoystickMouseControl.txt
+│   │   │   │           ├── layout.png
+│   │   │   │           └── schematic.png
+│   │   │   ├── 10.StarterKit_BasicKit
+│   │   │   │   ├── p02_SpaceshipInterface
+│   │   │   │   │   └── p02_SpaceshipInterface.ino
+│   │   │   │   ├── p03_LoveOMeter
+│   │   │   │   │   └── p03_LoveOMeter.ino
+│   │   │   │   ├── p04_ColorMixingLamp
+│   │   │   │   │   └── p04_ColorMixingLamp.ino
+│   │   │   │   ├── p05_ServoMoodIndicator
+│   │   │   │   │   └── p05_ServoMoodIndicator.ino
+│   │   │   │   ├── p06_LightTheremin
+│   │   │   │   │   └── p06_LightTheremin.ino
+│   │   │   │   ├── p07_Keyboard
+│   │   │   │   │   └── p07_Keyboard.ino
+│   │   │   │   ├── p08_DigitalHourglass
+│   │   │   │   │   └── p08_DigitalHourglass.ino
+│   │   │   │   ├── p09_MotorizedPinwheel
+│   │   │   │   │   └── p09_MotorizedPinwheel.ino
+│   │   │   │   ├── p10_Zoetrope
+│   │   │   │   │   └── p10_Zoetrope.ino
+│   │   │   │   ├── p11_CrystalBall
+│   │   │   │   │   └── p11_CrystalBall.ino
+│   │   │   │   ├── p12_KnockLock
+│   │   │   │   │   └── p12_KnockLock.ino
+│   │   │   │   ├── p13_TouchSensorLamp
+│   │   │   │   │   └── p13_TouchSensorLamp.ino
+│   │   │   │   ├── p14_TweakTheArduinoLogo
+│   │   │   │   │   └── p14_TweakTheArduinoLogo.ino
+│   │   │   │   └── p15_HackingButtons
+│   │   │   │       └── p15_HackingButtons.ino
+│   │   │   └── 11.ArduinoISP
+│   │   │       └── ArduinoISP
+│   │   │           └── ArduinoISP.ino
+│   │   ├── examples_formatter.conf
+│   │   ├── examples_formatter.sh
+│   │   ├── icons
+│   │   │   ├── 128x128
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   ├── 16x16
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   ├── 24x24
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   ├── 256x256
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   ├── 32x32
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   ├── 48x48
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   ├── 64x64
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   ├── 72x72
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   ├── 96x96
+│   │   │   │   └── apps
+│   │   │   │       └── arduino.png
+│   │   │   └── arduino.xpm
+│   │   ├── lib
+│   │   │   ├── about@2x.png
+│   │   │   ├── about.png
+│   │   │   ├── arduino_icon.ico
+│   │   │   ├── arduino.png
+│   │   │   ├── formatter.conf
+│   │   │   ├── keywords.txt
+│   │   │   ├── preferences.txt
+│   │   │   ├── public.gpg.key
+│   │   │   ├── splash.bmp
+│   │   │   ├── splash.png
+│   │   │   └── theme
+│   │   │       ├── buttons@2x.png
+│   │   │       ├── buttons.png
+│   │   │       ├── buttons.svg
+│   │   │       ├── close@2x.png
+│   │   │       ├── close.png
+│   │   │       ├── close.svg
+│   │   │       ├── lock@2x.png
+│   │   │       ├── lock.png
+│   │   │       ├── lock.svg
+│   │   │       ├── newwindow@2x.png
+│   │   │       ├── newwindow.png
+│   │   │       ├── newwindow.svg
+│   │   │       ├── resize@2x.png
+│   │   │       ├── resize.png
+│   │   │       ├── resize.svg
+│   │   │       ├── syntax
+│   │   │       │   ├── dark.xml
+│   │   │       │   └── default.xml
+│   │   │       ├── tab-sel-left@2x.png
+│   │   │       ├── tab-sel-left.png
+│   │   │       ├── tab-sel-left.svg
+│   │   │       ├── tab-sel-menu@2x.png
+│   │   │       ├── tab-sel-menu.png
+│   │   │       ├── tab-sel-menu.svg
+│   │   │       ├── tab-sel-mid@2x.png
+│   │   │       ├── tab-sel-mid.png
+│   │   │       ├── tab-sel-mid.svg
+│   │   │       ├── tab-sel-right@2x.png
+│   │   │       ├── tab-sel-right.png
+│   │   │       ├── tab-sel-right.svg
+│   │   │       ├── tab-unsel-left@2x.png
+│   │   │       ├── tab-unsel-left.png
+│   │   │       ├── tab-unsel-left.svg
+│   │   │       ├── tab-unsel-menu@2x.png
+│   │   │       ├── tab-unsel-menu.png
+│   │   │       ├── tab-unsel-menu.svg
+│   │   │       ├── tab-unsel-mid@2x.png
+│   │   │       ├── tab-unsel-mid.png
+│   │   │       ├── tab-unsel-mid.svg
+│   │   │       ├── tab-unsel-right@2x.png
+│   │   │       ├── tab-unsel-right.png
+│   │   │       ├── tab-unsel-right.svg
+│   │   │       └── theme.txt
+│   │   ├── manpage.adoc
+│   │   ├── reference-1.6.6-3.zip.sha
+│   │   ├── revisions.txt
+│   │   ├── tools
+│   │   │   ├── howto.txt
+│   │   │   └── Mangler
+│   │   │       ├── make.sh
+│   │   │       └── src
+│   │   │           └── Mangler.java
+│   │   └── WiFi101-Updater-ArduinoIDE-Plugin-0.10.12.zip.sha
+│   ├── SpacebrewYun-1.0.2.zip.sha
+│   ├── Stepper-1.1.3.zip.sha
+│   ├── Temboo-1.2.1.zip.sha
+│   ├── TFT-1.0.6.zip.sha
+│   ├── WiFi-1.2.7.zip.sha
+│   └── windows
+│       ├── arduinoOTA-1.2.1-windows_386.zip.sha
+│       ├── arduinoOTA-1.3.0-windows_386.zip.sha
+│       ├── avrdude-6.3.0-arduino14-i686-w64-mingw32.zip.sha
+│       ├── avrdude-6.3.0-arduino17-i686-w64-mingw32.zip.sha
+│       ├── avr-gcc-5.4.0-atmel3.6.1-arduino2-i686-w64-mingw32.zip.sha
+│       ├── avr-gcc-7.3.0-atmel3.6.1-arduino7-i686-w64-mingw32.zip.sha
+│       ├── dist
+│       │   ├── drivers
+│       │   │   ├── AdafruitCircuitPlayground.cat
+│       │   │   ├── AdafruitCircuitPlayground.inf
+│       │   │   ├── amd64
+│       │   │   │   ├── libusb0.dll
+│       │   │   │   └── libusb0.sys
+│       │   │   ├── arduino.cat
+│       │   │   ├── arduino_gemma.cat
+│       │   │   ├── arduino_gemma.inf
+│       │   │   ├── arduino.inf
+│       │   │   ├── arduino-org.cat
+│       │   │   ├── arduino-org.inf
+│       │   │   ├── CP210x_6.7
+│       │   │   │   ├── ReleaseNotes.txt
+│       │   │   │   ├── SLAB_License_Agreement_VCP_Windows.txt
+│       │   │   │   ├── slabvcp.cat
+│       │   │   │   ├── slabvcp.inf
+│       │   │   │   ├── x64
+│       │   │   │   │   ├── silabenm.sys
+│       │   │   │   │   ├── silabser.sys
+│       │   │   │   │   └── WdfCoInstaller01009.dll
+│       │   │   │   └── x86
+│       │   │   │       ├── silabenm.sys
+│       │   │   │       ├── silabser.sys
+│       │   │   │       └── WdfCoInstaller01009.dll
+│       │   │   ├── CP210x_6.7.4
+│       │   │   │   ├── slabvcp.cat
+│       │   │   │   ├── slabvcp.inf
+│       │   │   │   ├── x64
+│       │   │   │   │   ├── silabser.sys
+│       │   │   │   │   └── WdfCoInstaller01009.dll
+│       │   │   │   └── x86
+│       │   │   │       ├── silabser.sys
+│       │   │   │       └── WdfCoInstaller01009.dll
+│       │   │   ├── dpinst-amd64.exe
+│       │   │   ├── dpinst-x86.exe
+│       │   │   ├── FTDI USB Drivers
+│       │   │   │   ├── amd64
+│       │   │   │   │   ├── ftbusui.dll
+│       │   │   │   │   ├── ftcserco.dll
+│       │   │   │   │   ├── ftd2xx64.dll
+│       │   │   │   │   ├── ftd2xx.lib
+│       │   │   │   │   ├── ftdibus.sys
+│       │   │   │   │   ├── ftlang.dll
+│       │   │   │   │   ├── ftser2k.sys
+│       │   │   │   │   └── ftserui2.dll
+│       │   │   │   ├── ftd2xx.h
+│       │   │   │   ├── ftdibus.cat
+│       │   │   │   ├── ftdibus.inf
+│       │   │   │   ├── ftdiport.cat
+│       │   │   │   ├── ftdiport.inf
+│       │   │   │   ├── i386
+│       │   │   │   │   ├── ftbusui.dll
+│       │   │   │   │   ├── ftcserco.dll
+│       │   │   │   │   ├── ftd2xx.dll
+│       │   │   │   │   ├── ftd2xx.lib
+│       │   │   │   │   ├── ftdibus.sys
+│       │   │   │   │   ├── ftlang.dll
+│       │   │   │   │   ├── ftser2k.sys
+│       │   │   │   │   └── ftserui2.dll
+│       │   │   │   ├── LogoVerificationReport.pdf
+│       │   │   │   └── Static
+│       │   │   │       ├── amd64
+│       │   │   │       │   └── ftd2xx.lib
+│       │   │   │       └── i386
+│       │   │   │           └── ftd2xx.lib
+│       │   │   ├── genuino.cat
+│       │   │   ├── genuino.inf
+│       │   │   ├── ia64
+│       │   │   │   ├── libusb0.dll
+│       │   │   │   └── libusb0.sys
+│       │   │   ├── license
+│       │   │   │   └── libusb0
+│       │   │   │       └── installer_license.txt
+│       │   │   ├── linino-boards_amd64.cat
+│       │   │   ├── linino-boards_x86.cat
+│       │   │   ├── linino.inf
+│       │   │   ├── Old_Arduino_Drivers.zip
+│       │   │   ├── README.txt
+│       │   │   └── x86
+│       │   │       ├── libusb0.sys
+│       │   │       └── libusb0_x86.dll
+│       │   ├── gcc-arm-none-eabi-4.8.3-2014q1-windows.tar.gz.sha
+│       │   └── libusb0.dll
+│       ├── launch4j-3.9-linux.tgz.sha
+│       ├── launch4j-3.9-win32.zip.sha
+│       ├── launcher
+│       │   ├── application.ico
+│       │   ├── arduino.l4j.ini
+│       │   ├── config_debug.xml
+│       │   ├── config.xml
+│       │   └── wrapper-manifest.xml
+│       ├── listComPorts.exe
+│       ├── msvcp100.dll
+│       └── msvcr100.dll
+├── CONTRIBUTING.md
+├── hardware
+│   ├── package_index_bundled.json
+│   └── README.md
+├── libraries
+│   └── readme.txt
+├── license.txt
+├── README.md
+└── tree.txt
+
+317 directories, 1237 files

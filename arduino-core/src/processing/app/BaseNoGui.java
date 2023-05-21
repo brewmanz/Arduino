@@ -44,7 +44,8 @@ public class BaseNoGui {
   public static final int REVISION = 10817;
   /** Extended version string displayed on GUI */
   public static final String VERSION_NAME = "1.8.17"
-  .concat("(Bryan)");
+  .concat("(Bryan)")
+  ;
   public static final String VERSION_NAME_LONG;
 
   // Current directory to use for relative paths specified on the
