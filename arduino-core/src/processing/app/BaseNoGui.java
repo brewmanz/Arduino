@@ -41,9 +41,9 @@ import static processing.app.helpers.filefilters.OnlyDirs.ONLY_DIRS;
 public class BaseNoGui {
 
   /** Version string to be used for build */
-  public static final int REVISION = 10817;
+  public static final int REVISION = 10820;
   /** Extended version string displayed on GUI */
-  public static final String VERSION_NAME = "1.8.17"
+  public static final String VERSION_NAME = "1.8.20"
   .concat("(Bryan)")
   ;
   public static final String VERSION_NAME_LONG;
