@@ -44,7 +44,7 @@ public class BaseNoGui {
   public static final int REVISION = 10820;
   /** Extended version string displayed on GUI */
   public static final String VERSION_NAME = "1.8.20"
-  .concat("(Bryan)")
+  .concat("(Bryan+)")
   ;
   public static final String VERSION_NAME_LONG;
 

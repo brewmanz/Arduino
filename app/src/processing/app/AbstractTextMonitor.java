@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Toolkit; // for beep
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
@@ -229,6 +230,9 @@ public abstract class AbstractTextMonitor extends AbstractMonitor {
       while (tokenizer.hasMoreTokens()) {
         String token = tokenizer.nextToken();
         if (token.length() == 1 && token.charAt(0) == 0x08) { // clumsy but following fails to trigger // if (token == "\b") { // TODO why does this not work?
+          Toolkit.getDefaultToolkit().beep(); // seems to be no sound
+          System.out.print("\007");
+          System.out.flush();
           int textAreaLength = textArea.getDocument().getLength();
           // if nothing left to remove in this message, then trim last character off textArea, if possible
           if (sb.length() == 0 && textAreaLength != 0) {
